@@ -1,35 +1,31 @@
-import { useState } from 'react';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
- let [counter,setCounter] =useState(5)
-  // let counter = 5;
+  const [counter, setCounter] = useState(1);
   const addValue = () => {
-    // counter = counter+1;
-    if(counter<=19){
-    setCounter(counter+1)}
-    else{
-      alert("cannot add the number greater than 20")
+    if (counter <= 19) {
+
+
+      setCounter(counter + 1)
     }
-  } 
-  const removeValue=()=>{
-    // counter=counter-1
-    if(counter>=1){
-    setCounter(counter-1)
+    else {
+      alert("you cannot add the number greater than 20")
+    }
   }
-  else{
-    alert("cannot delete the number less than 0")
-  }
-  }
+  const removeValue = () => {
 
+    if (counter >= 1) {
+      setCounter(counter - 1)
+    } else {
+      alert("you cannot remove the number less than 0")
+    }
+  }
   return (
-    <>
-      <h1>Chai aur react</h1>
-      <h2>Counter Value:{counter}</h2>
-      <button onClick={addValue}>add value</button><br/>
-      <button onClick={removeValue}>remove value</button>
+    <><h1>Hello Apurv{counter}</h1>
+      <button onClick={addValue}>Add Value</button><br/>
+      <button onClick={removeValue}>Remove Value</button>
     </>
-  )
+  );
 }
-
-export default App
+export default App;
