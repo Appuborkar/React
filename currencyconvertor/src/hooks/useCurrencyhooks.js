@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 function useCurrencyInfo(currency){
+    const [data,setData]=useState({})
     useEffect(()=>{
-        const [data,setData]=useState({})
+        
         fetch(`https://latest.currency-api.pages.dev/v1/currencies/${currency}.json`)
         .then((res)=>res.json())
         .then((res)=>setData(res[currency]))
