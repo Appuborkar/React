@@ -11,3 +11,5 @@ export default {
   plugins: [],
 }
 
+// need to change the config file 
+// added  functionality of darkMode
