@@ -3,7 +3,6 @@ import './App.css'
 import { TodoForm, TodoItem } from "./components"
 import { TodoProvider } from "./contexts"
 
-
 function App() {
   const [todos, setTodos] = useState([])
 
@@ -16,7 +15,7 @@ function App() {
     setTodos((prev) => prev.map((prevTodo) => ( prevTodo.id === id ? todo : prevTodo )))
 
   }
-
+  
   const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
@@ -52,7 +51,7 @@ function App() {
             {todos.map((todo) => (
               <div
                 key={todo.id}
-                className="w-full">
+                className="w-full ">
                 <TodoItem todo={todo} />
               </div>
             ))}

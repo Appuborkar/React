@@ -10,14 +10,12 @@ function TodoItem({ todo }) {
     const {updateTodo,deleteTodo,toggleComplete}=useTodo()
 
     const editTodo=()=>{
-        updateTodo(todo.id,{...todo,todo:todoMsg})
+        updateTodo({...todo,todo:todoMsg},todo.id)
         setIsTodoEditable(false)
     }
-
     const toggleCompleted=()=>{
         toggleComplete(todo.id)
     }
-
     return (
         <div
             className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
@@ -63,5 +61,4 @@ function TodoItem({ todo }) {
         </div>
     );
 }
-
 export default TodoItem;
