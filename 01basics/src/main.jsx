@@ -1,5 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+import App from "./App"
 
 function MyApp() {
   return (
@@ -21,8 +22,8 @@ const reactElement=React.createElement(
 ReactDOM.createRoot(document.getElementById('root')).
   render(
    
-      // <App />
+      // <App />,
    
-    // anotherElement
-    reactElement
+    anotherElement
+    // reactElement/
   )
