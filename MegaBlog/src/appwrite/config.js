@@ -1,4 +1,4 @@
-import conf from '../conf.js'
+import conf from '../conf/conf'
 import { Client, ID, Databases, Storage, Query } from 'appwrite';
 
 
@@ -102,8 +102,8 @@ export class Service {
                 file
             )
         } catch (error) {
-            console.log("Appwrite service ::uploadFile::error", error)
-            return false
+                console.log("Appwrite service ::uploadFile::error", error)
+                return false
         }
     }
 
